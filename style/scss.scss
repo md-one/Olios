@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100wh;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 7% auto;
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
+
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding-top: 5vh;
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 90%;
+
+        svg {
+            margin: 20px auto;
+
+            &:hover {
+                cursor: pointer;
+
+                .menuIcon {
+                    transition: 0.5s;
+                    fill: #0023FF;
+                }
+            }
+
+
+        }
+    }
+}
+
+main {
+    background: #F0F0F0;
+
+    #intro {
+        background-image: url(images/photo-1449247709967-d4461a6a6103.png);
+        background-size: cover;
+        background-position: bottom;
+        height: 100%;
+        width: 100%;
+
+        .title {
+            text-align: center;
+            position: relative;
+            left: 50%;
+            top: -2%;
+            transform: translateX(-50%);
+
+
+            h2 {
+                font-size: 270px;
+                position: absolute;
+                left: 50%;
+                top: -5%;
+                transform: translateX(-50%);
+                margin: 0;
+                z-index: -1;
+                color: #E7E7E7;
+
+            }
+
+            h1 {
+                font-size: 150px;
+                margin: 0;
+                font-weight: 100;
+            }
+
+            p {
+                margin-top: 5px;
+                margin-bottom: 25px;
+                letter-spacing: 1px;
+            }
+
+            button {
+                background: #0023FF;
+                border: 0;
+                font-size: 12px;
+                padding: 14px 40px;
+                border-radius: 30px;
+                color: white;
+            }
+        }
+    }
+
+
+
+    #Hamburger {
+        position: absolute;
+        top: 5vh;
+        right: 5vh;
+
+        height: 60px;
+        width: 60px;
+        background: white;
+        border: 0;
+        border-radius: 50%;
+        box-shadow: 0 0 15px #DBDBDB;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        z-index: 7;
+
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 20%;
+        background: wheat;
+        transition: .5s;
+        transform: translateX(100%);
+    }
+
+}
