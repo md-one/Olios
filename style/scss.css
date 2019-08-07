@@ -6,7 +6,7 @@
 body {
   margin: 0;
   padding: 0;
-  width: 100wh;
+  width: 100vw;
   height: 100vh;
   display: -ms-grid;
   display: grid;
@@ -61,6 +61,8 @@ aside nav svg:hover .menuIcon {
 }
 
 main {
+  height: 100vh;
+  overflow-y: scroll;
   background: #F0F0F0;
 }
 
@@ -70,6 +72,7 @@ main #intro {
   background-position: bottom;
   height: 100%;
   width: 100%;
+  display: none;
 }
 
 main #intro .title {
@@ -114,6 +117,125 @@ main #intro .title button {
   color: white;
 }
 
+main #intro .title button:focus {
+  outline: 0;
+}
+
+main #intro .title button:hover {
+  cursor: pointer;
+}
+
+main #productPanal {
+  height: 100%;
+  width: 100%;
+  padding-left: 15%;
+}
+
+main #productPanal h3 {
+  font-size: 60px;
+  font-weight: 300;
+  margin: 0 auto 25px;
+  padding-top: 25px;
+}
+
+main #productPanal .products {
+  height: 70%;
+  width: 80%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 240px 240px 240px 240px;
+      grid-template-rows: 240px 240px 240px 240px;
+  -ms-grid-columns: 25% 25% 25% 25%;
+      grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 20px;
+}
+
+main #productPanal .products .product {
+  background: white;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #productPanal .products .product img {
+  width: auto;
+  height: 50%;
+}
+
+main #productPanal .products .product .text {
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+main #productPanal .products .product .text h4 {
+  font-size: 25px;
+  margin: 0;
+  font-weight: 300;
+}
+
+main #productPanal .products .product .text p {
+  font-size: 15px;
+  color: A8A8A8;
+  font-weight: 300;
+  margin: 0px auto 10px;
+}
+
+main #productPanal .products .product .text h5 {
+  font-size: 15px;
+  color: #0023FF;
+  margin: 0;
+}
+
+main #productPanal .products .horizontal {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main #productPanal .products .horizontal img {
+  width: auto;
+  height: 100%;
+}
+
+main #productPanal .products .horizontal .text {
+  width: auto;
+}
+
+main #productPanal .products .product:nth-child(2) {
+  grid-column: span 3;
+}
+
+main #productPanal .products .product:nth-child(4) {
+  grid-column: span 2;
+}
+
+main #productPanal .products .product:nth-child(6) {
+  grid-column: span 3;
+}
+
+main #productPanal .products .product:nth-child(10) {
+  grid-column: span 2;
+}
+
+main #productPanal .products .product:nth-child(11) {
+  grid-column: span 3;
+}
+
 main #Hamburger {
   position: absolute;
   top: 5vh;
@@ -136,6 +258,14 @@ main #Hamburger {
   z-index: 7;
 }
 
+main #Hamburger:focus {
+  outline: 0;
+}
+
+main #Hamburger:hover {
+  cursor: pointer;
+}
+
 main #menu {
   display: block;
   position: absolute;
@@ -143,10 +273,44 @@ main #menu {
   right: 0;
   height: 100%;
   width: 20%;
-  background: wheat;
+  background: white;
   -webkit-transition: .5s;
   transition: .5s;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #menu ul {
+  height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #menu ul li {
+  list-style: none;
+  font-size: 16px;
+  color: #C1C1C1;
+}
+
+main #menu ul li:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=scss.css.map */

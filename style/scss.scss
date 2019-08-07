@@ -5,7 +5,7 @@
 body {
     margin: 0;
     padding: 0;
-    width: 100wh;
+    width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-columns: 7% auto;
@@ -47,6 +47,8 @@ aside {
 }
 
 main {
+    height: 100vh;
+    overflow-y: scroll;
     background: #F0F0F0;
 
     #intro {
@@ -55,6 +57,7 @@ main {
         background-position: bottom;
         height: 100%;
         width: 100%;
+        display: none;
 
         .title {
             text-align: center;
@@ -95,11 +98,116 @@ main {
                 padding: 14px 40px;
                 border-radius: 30px;
                 color: white;
+
+                &:focus {
+                    outline: 0;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
 
+    #productPanal {
+        height: 100%;
+        width: 100%;
+        padding-left: 15%;
 
+        h3 {
+            font-size: 60px;
+            font-weight: 300;
+            margin: 0 auto 25px;
+            padding-top: 25px;
+        }
+
+        .products {
+            height: 70%;
+            width: 80%;
+            display: grid;
+            grid-template-rows: 240px 240px 240px 240px;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-gap: 20px;
+
+            .product {
+                background: white;
+                height: 100%;
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+
+                img {
+                    width: auto;
+                    height: 50%;
+                }
+
+                .text {
+                    width: 80%;
+                    margin-bottom: 10px;
+
+                    h4 {
+                        font-size: 25px;
+                        margin: 0;
+                        font-weight: 300;
+                    }
+
+                    p {
+                        font-size: 15px;
+                        color: A8A8A8;
+                        font-weight: 300;
+                        margin: 0px auto 10px;
+                    }
+
+                    h5 {
+                        font-size: 15px;
+                        color: #0023FF;
+                        margin: 0;
+                    }
+                }
+            }
+
+            .horizontal {
+                flex-direction: row;
+                justify-content: space-evenly;
+
+                img {
+                    width: auto;
+                    height: 100%;
+                }
+
+                .text {
+                    width: auto;
+                }
+            }
+
+            .product:nth-child(2) {
+                grid-column: span 3;
+            }
+
+            .product:nth-child(4) {
+                grid-column: span 2;
+            }
+
+            .product:nth-child(6) {
+                grid-column: span 3;
+            }
+
+            .product:nth-child(10) {
+                grid-column: span 2;
+            }
+
+            .product:nth-child(11) {
+                grid-column: span 3;
+            }
+        }
+
+
+
+    }
 
     #Hamburger {
         position: absolute;
@@ -117,6 +225,13 @@ main {
         align-content: center;
         z-index: 7;
 
+        &:focus {
+            outline: 0;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     #menu {
@@ -126,9 +241,30 @@ main {
         right: 0;
         height: 100%;
         width: 20%;
-        background: wheat;
+        background: white;
         transition: .5s;
         transform: translateX(100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+        ul {
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            li {
+                list-style: none;
+                font-size: 16px;
+                color: #C1C1C1;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
     }
 
 }
