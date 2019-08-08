@@ -62,7 +62,7 @@ aside nav svg:hover .menuIcon {
 
 main {
   height: 100vh;
-  overflow-y: scroll;
+  overflow: hidden;
   background: #F0F0F0;
 }
 
@@ -72,7 +72,6 @@ main #intro {
   background-position: bottom;
   height: 100%;
   width: 100%;
-  display: none;
 }
 
 main #intro .title {
@@ -129,6 +128,10 @@ main #productPanal {
   height: 100%;
   width: 100%;
   padding-left: 15%;
+  overflow-y: scroll;
+  display: none;
+  -webkit-animation: faidIn 1s;
+          animation: faidIn 1s;
 }
 
 main #productPanal h3 {
@@ -139,15 +142,15 @@ main #productPanal h3 {
 }
 
 main #productPanal .products {
-  height: 70%;
   width: 80%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 240px 240px 240px 240px;
-      grid-template-rows: 240px 240px 240px 240px;
+  -ms-grid-rows: 240px 240px 240px 240px 240px 240px;
+      grid-template-rows: 240px 240px 240px 240px 240px 240px;
   -ms-grid-columns: 25% 25% 25% 25%;
       grid-template-columns: 25% 25% 25% 25%;
   grid-gap: 20px;
+  margin-bottom: 30px;
 }
 
 main #productPanal .products .product {
@@ -166,6 +169,14 @@ main #productPanal .products .product {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+main #productPanal .products .product:hover {
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  cursor: pointer;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 main #productPanal .products .product img {
@@ -197,7 +208,11 @@ main #productPanal .products .product .text h5 {
   margin: 0;
 }
 
-main #productPanal .products .horizontal {
+main #productPanal .products .product:nth-child(4),
+main #productPanal .products .product:nth-child(8),
+main #productPanal .products .product:nth-child(13),
+main #productPanal .products .product:nth-child(17) {
+  grid-column: span 2;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -207,33 +222,56 @@ main #productPanal .products .horizontal {
           justify-content: space-evenly;
 }
 
-main #productPanal .products .horizontal img {
+main #productPanal .products .product:nth-child(4) img,
+main #productPanal .products .product:nth-child(8) img,
+main #productPanal .products .product:nth-child(13) img,
+main #productPanal .products .product:nth-child(17) img {
   width: auto;
   height: 100%;
 }
 
-main #productPanal .products .horizontal .text {
+main #productPanal .products .product:nth-child(4) .text,
+main #productPanal .products .product:nth-child(8) .text,
+main #productPanal .products .product:nth-child(13) .text,
+main #productPanal .products .product:nth-child(17) .text {
   width: auto;
 }
 
-main #productPanal .products .product:nth-child(2) {
+main #productPanal .products .product:nth-child(2),
+main #productPanal .products .product:nth-child(9),
+main #productPanal .products .product:nth-child(12),
+main #productPanal .products .product:nth-child(16) {
   grid-column: span 3;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-main #productPanal .products .product:nth-child(4) {
-  grid-column: span 2;
+main #productPanal .products .product:nth-child(2) img,
+main #productPanal .products .product:nth-child(9) img,
+main #productPanal .products .product:nth-child(12) img,
+main #productPanal .products .product:nth-child(16) img {
+  width: auto;
+  height: 100%;
 }
 
-main #productPanal .products .product:nth-child(6) {
-  grid-column: span 3;
+main #productPanal .products .product:nth-child(2) .text,
+main #productPanal .products .product:nth-child(9) .text,
+main #productPanal .products .product:nth-child(12) .text,
+main #productPanal .products .product:nth-child(16) .text {
+  width: auto;
 }
 
-main #productPanal .products .product:nth-child(10) {
-  grid-column: span 2;
-}
-
-main #productPanal .products .product:nth-child(11) {
-  grid-column: span 3;
+main #search {
+  background-image: url(images/photo-1449247709967-d4461a6a6103.png);
+  background-size: cover;
+  background-position: bottom;
+  height: 100%;
+  width: 100%;
 }
 
 main #Hamburger {
@@ -291,7 +329,7 @@ main #menu {
 }
 
 main #menu ul {
-  height: 40%;
+  height: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

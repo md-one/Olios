@@ -48,7 +48,7 @@ aside {
 
 main {
     height: 100vh;
-    overflow-y: scroll;
+    overflow: hidden;
     background: #F0F0F0;
 
     #intro {
@@ -57,7 +57,6 @@ main {
         background-position: bottom;
         height: 100%;
         width: 100%;
-        display: none;
 
         .title {
             text-align: center;
@@ -114,6 +113,9 @@ main {
         height: 100%;
         width: 100%;
         padding-left: 15%;
+        overflow-y: scroll;
+        display: none;
+        animation: faidIn 1s;
 
         h3 {
             font-size: 60px;
@@ -123,22 +125,27 @@ main {
         }
 
         .products {
-            height: 70%;
             width: 80%;
             display: grid;
-            grid-template-rows: 240px 240px 240px 240px;
+            grid-template-rows: 240px 240px 240px 240px 240px 240px;
             grid-template-columns: 25% 25% 25% 25%;
             grid-gap: 20px;
+            margin-bottom: 30px;
 
             .product {
                 background: white;
                 height: 100%;
                 width: 100%;
-
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
                 align-items: center;
+
+                &:hover {
+                    transition: 1.5s;
+                    cursor: pointer;
+                    transform: scale(1.03);
+                }
 
                 img {
                     width: auto;
@@ -170,7 +177,11 @@ main {
                 }
             }
 
-            .horizontal {
+            .product:nth-child(4),
+            .product:nth-child(8),
+            .product:nth-child(13),
+            .product:nth-child(17) {
+                grid-column: span 2;
                 flex-direction: row;
                 justify-content: space-evenly;
 
@@ -184,29 +195,34 @@ main {
                 }
             }
 
-            .product:nth-child(2) {
+            .product:nth-child(2),
+            .product:nth-child(9),
+            .product:nth-child(12),
+            .product:nth-child(16) {
                 grid-column: span 3;
+                flex-direction: row;
+                justify-content: space-evenly;
+
+                img {
+                    width: auto;
+                    height: 100%;
+                }
+
+                .text {
+                    width: auto;
+                }
             }
 
-            .product:nth-child(4) {
-                grid-column: span 2;
-            }
-
-            .product:nth-child(6) {
-                grid-column: span 3;
-            }
-
-            .product:nth-child(10) {
-                grid-column: span 2;
-            }
-
-            .product:nth-child(11) {
-                grid-column: span 3;
-            }
         }
 
+    }
 
-
+    #search {
+        background-image: url(images/photo-1449247709967-d4461a6a6103.png);
+        background-size: cover;
+        background-position: bottom;
+        height: 100%;
+        width: 100%;
     }
 
     #Hamburger {
@@ -250,7 +266,7 @@ main {
 
 
         ul {
-            height: 40%;
+            height: 30%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;

@@ -1,11 +1,13 @@
 var intro = document.getElementById("intro");
 var Products = document.getElementById("productPanal");
+var search = document.getElementById("searchPanal");
 var homeBtn = document.getElementById("homeBtn");
-
 var li = document.querySelectorAll("#menu li");
+
 var allProdact = document.querySelectorAll(".product");
-var newProdact = document.querySelectorAll(".new");
+var livingRoomProdact = document.querySelectorAll(".livingRoom");
 var officeProdact = document.querySelectorAll(".office");
+var bedRoomProdact = document.querySelectorAll(".bedRoom");
 
 
 function goToProducts() {
@@ -19,7 +21,7 @@ function goToIntro() {
 }
 
 homeBtn.addEventListener("click", function () {
-    goToIntro()
+    goToIntro();
 });
 
 for (let i = 0; i < li.length; i++) {
@@ -35,14 +37,31 @@ function hideAllProducts() {
     }
 }
 
+li[0].addEventListener("click", function () {
+
+    hideAllProducts();
+    for (let i = 0; i < bedRoomProdact.length; i++) {
+        bedRoomProdact[i].style.display = "flex";
+    }
+});
+
 li[1].addEventListener("click", function () {
 
     hideAllProducts();
-    for (let i = 0; i < newProdact.length; i++) {
-        newProdact[i].style.display = "flex";
+    for (let i = 0; i < officeProdact.length; i++) {
+        officeProdact[i].style.display = "flex";
     }
 });
-li[4].addEventListener("click", function () {
+
+li[2].addEventListener("click", function () {
+
+    hideAllProducts();
+    for (let i = 0; i < livingRoomProdact.length; i++) {
+        livingRoomProdact[i].style.display = "flex";
+    }
+});
+
+li[3].addEventListener("click", function () {
 
     for (let i = 0; i < allProdact.length; i++) {
         allProdact[i].style.display = "flex";
