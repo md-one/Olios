@@ -23,7 +23,7 @@
                     transform="translate(-59 -225.017)" fill="#d8d8d8" />
             </svg>
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="32" viewBox="0 0 36 32">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="32" viewBox="0 0 36 32" id="ProductBtn">
                 <path id="Basket" class="menuIcon"
                     d="M87,350H81.9a1.507,1.507,0,0,0-.132-.294l-5-8a1.5,1.5,0,0,0-2.547,1.588L78.418,350H65.582l4.191-6.706a1.5,1.5,0,0,0-2.547-1.588l-5,8A1.506,1.506,0,0,0,62.1,350H57a3,3,0,0,0-3,3v2a3,3,0,0,0,2.317,2.915l3.8,12.934A3,3,0,0,0,63,373H81a3,3,0,0,0,2.879-2.151l3.8-12.934A3,3,0,0,0,90,355v-2A3,3,0,0,0,87,350Zm-30,3H87v2H57Zm24,17-18,0L59.47,358H84.53Z"
                     transform="translate(-54 -341)" fill="#d8d8d8" />
@@ -49,131 +49,141 @@
             </div>
         </section>
 
-        <section id="productPanal">
+        <section id="products">
             <h3>products</h3>
             <div class="products">
-                <div class="product bedRoom">
+                <div class="product bedRoom" onclick="showproduct(this)">
                     <img src="style\images/products/tvStand.jpg" alt="">
                     <div class="text">
-                        <h4>TV STAND</h4>
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <h5>$45</h5>
+                        <h4 class="name">TV STAND</h4>
+                        <p class="description">Lorem ipsum dolor sit amet</p>
+                        <h5 class="cost">$45</h5>
                     </div>
                 </div>
-                <div class="product livingRoom horizontal">
+                <div class="product livingRoom horizontal" onclick="showproduct(this)">
                     <img src="style\images/products/darkSofa.jpg" alt="">
                     <div class="text">
-                        <h4>DARK SOFA</h4>
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <h5>$350</h5>
+                        <h4 class="name">DARK SOFA</h4>
+                        <p class="description">Lorem ipsum dolor sit amet</p>
+                        <h5 class="cost">$350</h5>
                     </div>
                 </div>
-                <div class="product livingRoom">
+                <div class="product livingRoom" onclick="showproduct(this)">
                     <img src="style\images/products/coffeeTable.jpg" alt="">
                     <div class="text">
-                        <h4>COFFEE TABLE</h4>
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <h5>$35</h5>
+                        <h4 class="name">COFFEE TABLE</h4>
+                        <p class="description">Lorem ipsum dolor sit amet</p>
+                        <h5 class="cost">$35</h5>
                     </div>
                 </div>
-                <div class="product bedRoom horizontal">
+                <div class="product bedRoom horizontal" onclick="showproduct(this)">
                     <img src="style\images/products/whiteShelf.jpg" alt="">
                     <div class="text">
-                        <h4>MODERN BED</h4>
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <h5>$120</h5>
+                        <h4 class="name">MODERN BED</h4>
+                        <p class="description">Lorem ipsum dolor sit amet</p>
+                        <h5 class="cost">$120</h5>
                     </div>
                 </div>
-                <div class="product bedRoom">
+                <div class="product bedRoom" onclick="showproduct(this)">
                     <img src="style\images/products/tableLamp.jpg" alt="">
                     <div class="text">
-                        <h4>DARCK SEAT</h4>
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <h5>$50</h5>
+                        <h4 class="name">DARCK SEAT</h4>
+                        <p class="description">Lorem ipsum dolor sit amet</p>
+                        <h5 class="cost">$50</h5>
                     </div>
                 </div>
 
-                <div class="product bedRoom">
+                <div class="product bedRoom" onclick="showproduct(this)">
                     <img src="style\images/products/drawers.jpg" alt="">
                     <div class="text">
-                        <h4>RED SEAT</h4>
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <h5>$45</h5>
+                        <h4 class="name">RED SEAT</h4>
+                        <p class="description">Lorem ipsum dolor sit amet</p>
+                        <h5 class="cost">$45</h5>
                     </div>
                 </div>
-                <div class="product office">
+                <div class="product office" onclick="showproduct(this)">
                     <img src="style\images/products/deskChair.jpg" alt="">
                     <div class="text">
-                        <h4>WHITE TABLE</h4>
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <h5>$350</h5>
+                        <h4 class="name">WHITE TABLE</h4>
+                        <p class="description">Lorem ipsum dolor sit amet</p>
+                        <h5 class="cost">$350</h5>
                     </div>
                 </div>
-                <div class="product office">
+                <div class="product office" onclick="showproduct(this)">
                     <img src="style\images/products/smallDesk.jpg" alt="">
                     <div class="text">
-                        <h4>BLUE SEAT</h4>
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <h5>$35</h5>
+                        <h4 class="name">BLUE SEAT</h4>
+                        <p class="description">Lorem ipsum dolor sit amet</p>
+                        <h5 class="cost">$35</h5>
                     </div>
                 </div>
-                <div class="product bedRoom">
+                <div class="product bedRoom" onclick="showproduct(this)">
                     <img src="style\images/products/modernBed.jpg" alt="">
                     <div class="text">
-                        <h4>MODERN BED</h4>
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <h5>$120</h5>
+                        <h4 class="name">MODERN BED</h4>
+                        <p class="description">Lorem ipsum dolor sit amet</p>
+                        <h5 class="cost">$120</h5>
                     </div>
                 </div>
-                <div class="product office">
+                <div class="product office" onclick="showproduct(this)">
                     <img src="style\images/products/deskChair2.jpg" alt="">
                     <div class="text">
-                        <h4>DARCK SEAT</h4>
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <h5>$50</h5>
+                        <h4 class="name">DARCK SEAT</h4>
+                        <p class="description">Lorem ipsum dolor sit amet</p>
+                        <h5 class="cost">$50</h5>
                     </div>
                 </div>
-                <div class="product livingRoom">
+                <div class="product livingRoom" onclick="showproduct(this)">
                     <img src="style\images/products/darkArmchair.jpg" alt="">
                     <div class="text">
-                        <h4>DARCK SEAT</h4>
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <h5>$50</h5>
+                        <h4 class="name">DARCK SEAT</h4>
+                        <p class="description">Lorem ipsum dolor sit amet</p>
+                        <h5 class="cost">$50</h5>
                     </div>
                 </div>
-                <div class="product office">
+                <div class="product office" onclick="showproduct(this)">
                     <img src="style\images/products/modernDesk.jpg" alt="">
                     <div class="text">
-                        <h4>DARCK SEAT</h4>
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <h5>$50</h5>
+                        <h4 class="name">DARCK SEAT</h4>
+                        <p class="description">Lorem ipsum dolor sit amet</p>
+                        <h5 class="cost">$50</h5>
                     </div>
                 </div>
-                <div class="product livingRoom">
+                <div class="product livingRoom" onclick="showproduct(this)">
                     <img src="style\images/products/florLamp.jpg" alt="">
                     <div class="text">
-                        <h4>DARCK SEAT</h4>
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <h5>$50</h5>
+                        <h4 class="name">DARCK SEAT</h4>
+                        <p class="description">Lorem ipsum dolor sit amet</p>
+                        <h5 class="cost">$50</h5>
                     </div>
                 </div>
-                <div class="product office">
+                <div class="product office" onclick="showproduct(this)">
                     <img src="style\images/products/deskLamp.jpg" alt="">
                     <div class="text">
-                        <h4>DARCK SEAT</h4>
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <h5>$50</h5>
+                        <h4 class="name">DARCK SEAT</h4>
+                        <p class="description">Lorem ipsum dolor sit amet</p>
+                        <h5 class="cost">$50</h5>
                     </div>
                 </div>
-                <div class="product livingRoom">
+                <div class="product livingRoom" onclick="showproduct(this)">
                     <img src="style\images/products/darkChair.jpg" alt="">
                     <div class="text">
-                        <h4>DARCK SEAT</h4>
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <h5>$50</h5>
+                        <h4 class="name">DARCK SEAT</h4>
+                        <p class="description">Lorem ipsum dolor sit amet</p>
+                        <h5 class="cost">$50</h5>
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+        <section id="product">
+            <div class="img">
+                <img src="style\images/products/tvStand.jpg" alt=""></div>
+            <div class="text">
+                <h4 class="name">TV STAND</h4>
+                <p class="description">Lorem ipsum dolor sit amet</p>
+                <h5 class="cost">$45</h5>
             </div>
         </section>
 

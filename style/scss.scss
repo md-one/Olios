@@ -57,6 +57,7 @@ main {
         background-position: bottom;
         height: 100%;
         width: 100%;
+        display: none;
 
         .title {
             text-align: center;
@@ -109,12 +110,12 @@ main {
         }
     }
 
-    #productPanal {
+    #products {
         height: 100%;
         width: 100%;
         padding-left: 15%;
         overflow-y: scroll;
-        display: none;
+
         animation: faidIn 1s;
 
         h3 {
@@ -215,6 +216,54 @@ main {
 
         }
 
+    }
+
+    #product {
+        height: 100%;
+        width: 100%;
+
+        .img {
+            height: 100%;
+            width: 40%;
+            float: left;
+
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 90%;
+            }
+        }
+
+        .text {
+            height: 70%;
+            width: 60%;
+            float: right;
+
+            >.name {
+                color: #0023FF;
+                font-weight: 300;
+                font-size: 70px;
+                margin: 0;
+            }
+
+            >.description {
+                font-size: 24px;
+            }
+
+            >.cost {
+                font-size: 48px;
+                margin: 0
+            }
+
+            >.cost::before {
+                content: "COST:";
+                font-size: 18px;
+            }
+
+        }
     }
 
     #search {
