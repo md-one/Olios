@@ -72,6 +72,7 @@ main #intro {
   background-position: bottom;
   height: 100%;
   width: 100%;
+  display: none;
 }
 
 main #intro .title {
@@ -124,24 +125,23 @@ main #intro .title button:hover {
   cursor: pointer;
 }
 
-main #productPanal {
+main #products {
   height: 100%;
   width: 100%;
   padding-left: 15%;
   overflow-y: scroll;
-  display: none;
   -webkit-animation: faidIn 1s;
           animation: faidIn 1s;
 }
 
-main #productPanal h3 {
+main #products h3 {
   font-size: 60px;
   font-weight: 300;
   margin: 0 auto 25px;
   padding-top: 25px;
 }
 
-main #productPanal .products {
+main #products .products {
   width: 80%;
   display: -ms-grid;
   display: grid;
@@ -153,7 +153,7 @@ main #productPanal .products {
   margin-bottom: 30px;
 }
 
-main #productPanal .products .product {
+main #products .products .product {
   background: white;
   height: 100%;
   width: 100%;
@@ -171,7 +171,7 @@ main #productPanal .products .product {
           align-items: center;
 }
 
-main #productPanal .products .product:hover {
+main #products .products .product:hover {
   -webkit-transition: 1.5s;
   transition: 1.5s;
   cursor: pointer;
@@ -179,39 +179,39 @@ main #productPanal .products .product:hover {
           transform: scale(1.03);
 }
 
-main #productPanal .products .product img {
+main #products .products .product img {
   width: auto;
   height: 50%;
 }
 
-main #productPanal .products .product .text {
+main #products .products .product .text {
   width: 80%;
   margin-bottom: 10px;
 }
 
-main #productPanal .products .product .text h4 {
+main #products .products .product .text h4 {
   font-size: 25px;
   margin: 0;
   font-weight: 300;
 }
 
-main #productPanal .products .product .text p {
+main #products .products .product .text p {
   font-size: 15px;
   color: A8A8A8;
   font-weight: 300;
   margin: 0px auto 10px;
 }
 
-main #productPanal .products .product .text h5 {
+main #products .products .product .text h5 {
   font-size: 15px;
   color: #0023FF;
   margin: 0;
 }
 
-main #productPanal .products .product:nth-child(4),
-main #productPanal .products .product:nth-child(8),
-main #productPanal .products .product:nth-child(13),
-main #productPanal .products .product:nth-child(17) {
+main #products .products .product:nth-child(4),
+main #products .products .product:nth-child(8),
+main #products .products .product:nth-child(13),
+main #products .products .product:nth-child(17) {
   grid-column: span 2;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -222,25 +222,25 @@ main #productPanal .products .product:nth-child(17) {
           justify-content: space-evenly;
 }
 
-main #productPanal .products .product:nth-child(4) img,
-main #productPanal .products .product:nth-child(8) img,
-main #productPanal .products .product:nth-child(13) img,
-main #productPanal .products .product:nth-child(17) img {
+main #products .products .product:nth-child(4) img,
+main #products .products .product:nth-child(8) img,
+main #products .products .product:nth-child(13) img,
+main #products .products .product:nth-child(17) img {
   width: auto;
   height: 100%;
 }
 
-main #productPanal .products .product:nth-child(4) .text,
-main #productPanal .products .product:nth-child(8) .text,
-main #productPanal .products .product:nth-child(13) .text,
-main #productPanal .products .product:nth-child(17) .text {
+main #products .products .product:nth-child(4) .text,
+main #products .products .product:nth-child(8) .text,
+main #products .products .product:nth-child(13) .text,
+main #products .products .product:nth-child(17) .text {
   width: auto;
 }
 
-main #productPanal .products .product:nth-child(2),
-main #productPanal .products .product:nth-child(9),
-main #productPanal .products .product:nth-child(12),
-main #productPanal .products .product:nth-child(16) {
+main #products .products .product:nth-child(2),
+main #products .products .product:nth-child(9),
+main #products .products .product:nth-child(12),
+main #products .products .product:nth-child(16) {
   grid-column: span 3;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -251,19 +251,50 @@ main #productPanal .products .product:nth-child(16) {
           justify-content: space-evenly;
 }
 
-main #productPanal .products .product:nth-child(2) img,
-main #productPanal .products .product:nth-child(9) img,
-main #productPanal .products .product:nth-child(12) img,
-main #productPanal .products .product:nth-child(16) img {
+main #products .products .product:nth-child(2) img,
+main #products .products .product:nth-child(9) img,
+main #products .products .product:nth-child(12) img,
+main #products .products .product:nth-child(16) img {
   width: auto;
   height: 100%;
 }
 
-main #productPanal .products .product:nth-child(2) .text,
-main #productPanal .products .product:nth-child(9) .text,
-main #productPanal .products .product:nth-child(12) .text,
-main #productPanal .products .product:nth-child(16) .text {
+main #products .products .product:nth-child(2) .text,
+main #products .products .product:nth-child(9) .text,
+main #products .products .product:nth-child(12) .text,
+main #products .products .product:nth-child(16) .text {
   width: auto;
+}
+
+main #product {
+  height: 100%;
+  width: 100%;
+}
+
+main #product .img {
+  height: 100%;
+  width: 40%;
+  float: left;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #product .img img {
+  width: 90%;
+}
+
+main #product .text {
+  height: 70%;
+  width: 60%;
+  float: right;
 }
 
 main #search {
