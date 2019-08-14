@@ -297,6 +297,27 @@ main #product .text {
   float: right;
 }
 
+main #product .text > .name {
+  color: #0023FF;
+  font-weight: 300;
+  font-size: 70px;
+  margin: 0;
+}
+
+main #product .text > .description {
+  font-size: 24px;
+}
+
+main #product .text > .cost {
+  font-size: 48px;
+  margin: 0;
+}
+
+main #product .text > .cost::before {
+  content: "COST:";
+  font-size: 18px;
+}
+
 main #search {
   background-image: url(images/photo-1449247709967-d4461a6a6103.png);
   background-size: cover;

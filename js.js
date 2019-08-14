@@ -95,17 +95,17 @@ function showproduct(obj) {
     var prodectimg = document.querySelector("#product .img img");
     prodectimg.src = img;
 
-    var h4 = obj.querySelector(".text .name").outerHTML;
+    var h4 = obj.querySelector(".text .name").outerText;
     var name = document.querySelector("#product .text .name");
-    name.innerHTML = h4;
+    name.innerText = h4;
 
-    var p = obj.querySelector(".text .description").outerHTML;
+    var p = obj.querySelector(".text .description").outerText;
     var description = document.querySelector("#product .text .description");
-    description.innerHTML = p;
+    description.innerText = p;
 
 
-    var h5 = obj.querySelector(".text .cost").outerHTML;
+    var h5 = obj.querySelector(".text .cost").outerText;
     var Cost = document.querySelector("#product .text .cost");
-    Cost.innerHTML = h5;
+    Cost.innerText = h5;
 
 }
