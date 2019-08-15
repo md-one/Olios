@@ -101,7 +101,7 @@ function showproduct(obj) {
 
     var p = obj.querySelector(".text .description").outerText;
     var description = document.querySelector("#product .text .description");
-    description.innerText = p;
+    description.innerText = p + " Lorem ipsum dolor";
 
 
     var h5 = obj.querySelector(".text .cost").outerText;
