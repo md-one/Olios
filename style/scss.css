@@ -1,6 +1,7 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -390,12 +391,39 @@ main #product .contener .text .payment .input button:hover {
   cursor: pointer;
 }
 
-main #search {
+main #searchPanal {
   background-image: url(images/photo-1449247709967-d4461a6a6103.png);
   background-size: cover;
   background-position: bottom;
   height: 100%;
   width: 100%;
+}
+
+main #searchPanal .contant {
+  height: 100%;
+  width: 100%;
+  background: rgba(225, 225, 225, 0.8);
+  padding: 15vh 10%;
+}
+
+main #searchPanal .contant input[type="text"] {
+  background: rgba(225, 225, 225, 0);
+  width: 80%;
+  border: 0;
+  border-bottom: 1px solid black;
+  padding-bottom: 15px;
+  font-size: 110px;
+  font-weight: 300;
+}
+
+main #searchPanal .contant input[type="text"]:focus {
+  outline: 0;
+}
+
+main #searchPanal .contant label {
+  margin-top: 15px;
+  font-size: 35px;
+  color: #b1b1b1;
 }
 
 main #Hamburger {

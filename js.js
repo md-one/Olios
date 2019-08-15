@@ -3,6 +3,7 @@ var Products = document.getElementById("products");
 var Product = document.getElementById("product");
 var search = document.getElementById("searchPanal");
 var homeBtn = document.getElementById("homeBtn");
+var searchBtn = document.getElementById("searchBtn");
 var li = document.querySelectorAll("#menu li");
 
 var allProdact = document.querySelectorAll(".product");
@@ -13,21 +14,37 @@ var bedRoomProdact = document.querySelectorAll(".bedRoom");
 function goToProducts() {
     intro.style.display = "none";
     Products.style.display = "block";
+    Product.style.display = "none";
+    search.style.display = "none";
 }
 
 function goToProduct() {
     intro.style.display = "none";
     Products.style.display = "none";
     Product.style.display = "block";
+    search.style.display = "none";
 }
 
 function goToIntro() {
     Products.style.display = "none";
+    Product.style.display = "none";
     intro.style.display = "block";
+    search.style.display = "none";
+}
+
+function goToSearch() {
+    Products.style.display = "none";
+    Product.style.display = "none";
+    intro.style.display = "none";
+    search.style.display = "block";
 }
 
 homeBtn.addEventListener("click", function () {
     goToIntro();
+});
+
+searchBtn.addEventListener("click", function () {
+    goToSearch();
 });
 
 for (let i = 0; i < li.length; i++) {
