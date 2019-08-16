@@ -61,7 +61,6 @@ main {
         background-position: bottom;
         height: 100%;
         width: 100%;
-        display: none;
 
         .title {
             text-align: center;
@@ -119,7 +118,7 @@ main {
         width: 100%;
         padding-left: 15%;
         overflow-y: scroll;
-
+        display: none;
         animation: faidIn 1s;
 
         h3 {
@@ -225,6 +224,7 @@ main {
     #product {
         height: 100%;
         width: 100%;
+        display: none;
 
         .img {
             height: 100%;
@@ -245,7 +245,7 @@ main {
             height: 70%;
             width: 60%;
             float: right;
-            padding: 5vh 30px;
+            padding: 5vh 60px;
 
             h3 {
                 font-size: 60px;
@@ -255,7 +255,7 @@ main {
             }
 
             .text {
-                margin: 15% 0;
+                margin: 20% 0;
 
                 >.name {
                     color: #0023FF;
@@ -345,11 +345,20 @@ main {
         height: 100%;
         width: 100%;
 
-        .contant {
+        .overLay {
+            position: absolute;
             height: 100%;
             width: 100%;
-            background: rgba(225, 225, 225, 0.8);
-            padding: 15vh 10%;
+            background: rgba(255, 255, 255, 0.7);
+            z-index: 1;
+        }
+
+        .contant {
+            height: 50%;
+            width: 100%;
+            padding: 10vh 10% 0;
+            position: relative;
+            z-index: 2;
 
             input[type="text"] {
                 background: rgba(225, 225, 225, 0);
@@ -370,6 +379,79 @@ main {
                 margin-top: 15px;
                 font-size: 35px;
                 color: #b1b1b1;
+            }
+        }
+
+        .result {
+            display: grid;
+            height: 140px;
+            width: 80%;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+
+            grid-template-rows: 140px;
+            grid-template-columns: 38% 38%;
+            grid-column-gap: 3%;
+            overflow-y: hidden;
+
+            .product {
+                background: white;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: row;
+                justify-content: space-evenly;
+
+                img {
+                    width: auto;
+                    height: 100%;
+                }
+
+
+                &:hover {
+                    transition: 1.5s;
+                    cursor: pointer;
+                    transform: scale(1.03);
+                }
+
+                img {
+                    width: auto;
+                    height: 75%;
+                }
+
+                .text {
+                    width: auto;
+                    text-align: center;
+                    width: fit-content;
+                    margin-bottom: 10px;
+
+                    h4 {
+                        font-size: 27px;
+                        margin: 0;
+                        font-weight: 300;
+                        width: fit-content;
+                    }
+
+                    p {
+                        font-size: 15px;
+                        color: A8A8A8;
+                        font-weight: 300;
+                        margin: 0px auto 10px;
+                        display: none;
+                    }
+
+                    h5 {
+                        font-size: 15px;
+                        color: #0023FF;
+                        margin: 0;
+                        display: none;
+                    }
+                }
             }
         }
     }
