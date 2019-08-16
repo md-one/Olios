@@ -49,8 +49,14 @@ searchBtn.addEventListener("click", function () {
 });
 
 for (let i = 0; i < li.length; i++) {
+    // change how deal with the mune after li click
     li[i].addEventListener("click", function () {
-        menu.style.transform = "translateX(100%)"
+        if (window.matchMedia("(min-width: 768px)").matches) {
+            menu.style.transform = "translateX(100%)";
+        } else {
+            menu.style.display = "none";
+        }
+
         goToProducts();
     })
 }
@@ -103,6 +109,18 @@ menuBtn.addEventListener("click", function () {
     } else {
         menuOpen = false;
         menu.style.transform = "translateX(100%)"
+    }
+});
+
+var phonemMenuBtn = document.getElementById("phoneHamburger");
+
+phonemMenuBtn.addEventListener("click", function () {
+    if (menuOpen === false) {
+        menuOpen = true;
+        menu.style.display = "flex"
+    } else {
+        menuOpen = false;
+        menu.style.display = "none"
     }
 });
 

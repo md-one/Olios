@@ -22,8 +22,7 @@ aside {
     height: 100%;
     width: 100%;
     padding-top: 5vh;
-    z-index: 10;
-
+    z-index: 15;
     box-shadow: -1px 1px 10px 0px grey;
 
     nav {
@@ -499,6 +498,7 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        z-index: 10;
 
 
         ul {

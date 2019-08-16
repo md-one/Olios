@@ -31,7 +31,7 @@ aside {
   height: 100%;
   width: 100%;
   padding-top: 5vh;
-  z-index: 10;
+  z-index: 15;
   -webkit-box-shadow: -1px 1px 10px 0px grey;
           box-shadow: -1px 1px 10px 0px grey;
 }
@@ -585,6 +585,7 @@ main #menu {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 10;
 }
 
 main #menu ul {
@@ -640,7 +641,6 @@ main #menu ul li:hover {
     height: 100%;
     width: 100%;
     padding: 0 5%;
-    z-index: 10;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -827,7 +827,38 @@ main #menu ul li:hover {
     overflow-y: hidden;
   }
   main #menu {
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    bottom: 0;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     display: none;
+    z-index: 10;
+  }
+  main #menu ul {
+    height: 50%;
+    text-align: center;
+    padding: 0;
+  }
+  main #menu ul li {
+    list-style: none;
+    font-size: 30px;
+    color: #C1C1C1;
+  }
+  main #menu ul li:hover {
+    cursor: pointer;
   }
   main #Hamburger {
     display: none;
