@@ -1,7 +1,7 @@
 var intro = document.getElementById("intro");
 var Products = document.getElementById("products");
 var Product = document.getElementById("product");
-var search = document.getElementById("searchPanal");
+var searchPanal = document.getElementById("searchPanal");
 var homeBtn = document.getElementById("homeBtn");
 var searchBtn = document.getElementById("searchBtn");
 var li = document.querySelectorAll("#menu li");
@@ -15,28 +15,29 @@ function goToProducts() {
     intro.style.display = "none";
     Products.style.display = "block";
     Product.style.display = "none";
-    search.style.display = "none";
+    searchPanal.style.display = "none";
 }
 
 function goToProduct() {
     intro.style.display = "none";
     Products.style.display = "none";
     Product.style.display = "block";
-    search.style.display = "none";
+    searchPanal.style.display = "none";
 }
 
 function goToIntro() {
     Products.style.display = "none";
     Product.style.display = "none";
     intro.style.display = "block";
-    search.style.display = "none";
+    searchPanal.style.display = "none";
 }
 
 function goToSearch() {
+    console.log("fffffff");
     Products.style.display = "none";
     Product.style.display = "none";
     intro.style.display = "none";
-    search.style.display = "block";
+    searchPanal.style.display = "block";
 }
 
 homeBtn.addEventListener("click", function () {
@@ -48,8 +49,14 @@ searchBtn.addEventListener("click", function () {
 });
 
 for (let i = 0; i < li.length; i++) {
+    // change how deal with the mune after li click
     li[i].addEventListener("click", function () {
-        menu.style.transform = "translateX(100%)"
+        if (window.matchMedia("(min-width: 768px)").matches) {
+            menu.style.transform = "translateX(100%)";
+        } else {
+            menu.style.display = "none";
+        }
+
         goToProducts();
     })
 }
@@ -105,7 +112,19 @@ menuBtn.addEventListener("click", function () {
     }
 });
 
+var phonemMenuBtn = document.getElementById("phoneHamburger");
 
+phonemMenuBtn.addEventListener("click", function () {
+    if (menuOpen === false) {
+        menuOpen = true;
+        menu.style.display = "flex"
+    } else {
+        menuOpen = false;
+        menu.style.display = "none"
+    }
+});
+
+// to show product in sing product page
 function showproduct(obj) {
     goToProduct();
     var img = obj.querySelector("img").src;
