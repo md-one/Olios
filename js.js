@@ -45,10 +45,7 @@ homeBtn.addEventListener("click", function () {
 });
 
 searchBtn.addEventListener("click", function () {
-
     goToSearch();
-
-
 });
 
 for (let i = 0; i < li.length; i++) {
@@ -109,7 +106,7 @@ menuBtn.addEventListener("click", function () {
     }
 });
 
-
+// to show product in sing product page
 function showproduct(obj) {
     goToProduct();
     var img = obj.querySelector("img").src;
