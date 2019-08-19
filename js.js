@@ -11,41 +11,21 @@ var livingRoomProdact = document.querySelectorAll(".livingRoom");
 var officeProdact = document.querySelectorAll(".office");
 var bedRoomProdact = document.querySelectorAll(".bedRoom");
 
-function goToProducts() {
-    intro.style.display = "none";
-    Products.style.display = "block";
-    Product.style.display = "none";
-    searchPanal.style.display = "none";
-}
-
-function goToProduct() {
-    intro.style.display = "none";
-    Products.style.display = "none";
-    Product.style.display = "block";
-    searchPanal.style.display = "none";
-}
-
-function goToIntro() {
-    Products.style.display = "none";
-    Product.style.display = "none";
-    intro.style.display = "block";
-    searchPanal.style.display = "none";
-}
-
-function goToSearch() {
-    console.log("fffffff");
+function colseAllWindows() {
     Products.style.display = "none";
     Product.style.display = "none";
     intro.style.display = "none";
-    searchPanal.style.display = "block";
+    searchPanal.style.display = "none";
 }
 
 homeBtn.addEventListener("click", function () {
-    goToIntro();
+    colseAllWindows();
+    intro.style.display = "block";
 });
 
 searchBtn.addEventListener("click", function () {
-    goToSearch();
+    colseAllWindows();
+    searchPanal.style.display = "block";
 });
 
 for (let i = 0; i < li.length; i++) {
@@ -57,7 +37,8 @@ for (let i = 0; i < li.length; i++) {
             menu.style.display = "none";
         }
 
-        goToProducts();
+        colseAllWindows();
+        Products.style.display = "block";
     })
 }
 
@@ -126,7 +107,9 @@ phonemMenuBtn.addEventListener("click", function () {
 
 // to show product in sing product page
 function showproduct(obj) {
-    goToProduct();
+    colseAllWindows();
+    Product.style.display = "block";
+
     var img = obj.querySelector("img").src;
     var prodectimg = document.querySelector("#product .img img");
     prodectimg.src = img;
